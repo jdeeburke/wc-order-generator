@@ -1,0 +1,25 @@
+{
+  "name": "wc-order-tester",
+  "version": "1.0.0",
+  "description": "Create test orders on a WooCommerce site via the REST API v2",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./package-lock.json,./npm-debug.log --copy-files",
+    "start": "npm run build && node dist/index.js"
+  },
+  "author": "Jared Burke <jared@burkeshop.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "inquirer": "^6.0.0",
+    "mocker-data-generator": "^2.6.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2016": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
+    "rimraf": "^2.6.2"
+  }
+}
